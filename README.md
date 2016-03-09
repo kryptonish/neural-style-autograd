@@ -1,3 +1,7 @@
+# Fork description
+
+This is a version of neural-style implemented with autograd. ~100 lines less, as fast as the original.
+
 # neural-style
 
 This is a torch implementation of the paper [A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576)
