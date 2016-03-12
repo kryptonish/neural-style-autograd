@@ -222,10 +222,7 @@ local function main(params)
   local style_targets = {}
   for i,v in ipairs(style_images_caffe) do
      for j,u in ipairs(f(net_params, v)[1]) do
-        local target = style_targets[j]
-        if i == 1 then
-           target = gram(u):zero()
-        end
+        local target = style_targets[j] or target = gram(u):zero()
         target = target + gram(u) * style_blend_weights[i] / u:numel() 
         style_targets[j] = target
      end
